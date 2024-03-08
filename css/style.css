@@ -24,7 +24,6 @@ body {
     width: 100%;
     max-width: 1440px;
     padding: 0 50px;
-    box-sizing: border-box;
 }
 
 a {
@@ -77,18 +76,19 @@ header img {
     margin: 30px;
 }
 
-nav {
+#main-nav {
     width: 344px;
     display: flex;
     justify-content: space-around;
 }
 
-nav a {
+#main-nav a {
     display: block;
     padding: 15px;
+    border-top: solid rgba(0, 0, 0, 0) 2px;
 }
 
-nav a:hover {
+#main-nav a:hover {
     color: var(--main-color);
     border-top: solid var(--main-color) 2px;
 }
@@ -218,13 +218,13 @@ input:focus {
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 35px;
 }
 
 .hebergements-and-populaires section {
     background-color: var(--main-bg-color);
     border-radius: 20px;
     padding: 30px;
-    box-sizing: border-box;
 }
 
 /****** Hebergements ***********/
@@ -236,12 +236,12 @@ input:focus {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 30px;
-    margin: 30px 0;
+    margin-top: 30px;
 }
 
 .hebergement-cards a {
-    flex: 1 1 30%;
+    width: calc(100% / 3 - 60px / 3);
+    margin-bottom: 30px;
 }
 
 .hebergement-cards .card {
@@ -262,7 +262,6 @@ input:focus {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-sizing: border-box;
 }
 
 .hebergement-cards .card-title {
@@ -307,7 +306,6 @@ input:focus {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-sizing: border-box;
 }
 
 .populaires-cards .card-title {
@@ -323,7 +321,74 @@ input:focus {
     margin-bottom: 5px;
 }
 
+/****** Activités ***********/
+#activites {
+    padding: 30px;
+}
 
+.activites-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.activites-cards a {
+    width: calc(100% / 4 - 90px / 4);
+    margin-bottom: 30px;
+}
+
+.activites-cards .card {
+    height: 439px;
+    display: flex;
+    flex-direction: column;
+}
+
+.activites-cards img {
+    height: 380px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.activites-cards .card-content {
+    height: 59px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.activites-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.activites-cards .card-subtitle {
+    margin: 0;
+}
+
+.activites-cards .card-rating {
+    margin-bottom: 5px;
+}
+
+/****** Footer ***********/
+footer {
+    background-color: var(--main-bg-color);
+}
+
+#footer-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-section {
+    padding: 20px;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
