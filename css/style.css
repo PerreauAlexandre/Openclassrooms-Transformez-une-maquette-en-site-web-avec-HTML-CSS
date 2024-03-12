@@ -124,7 +124,7 @@ header img {
     display: flex;
     align-items: center;
     height: 100%;
-    padding: 0 15px;
+    padding: 0 19px;
     background-color: var(--main-bg-color);
 }
 
@@ -154,7 +154,7 @@ input:focus {
     background-color: var(--main-color);
     color: white;
     height: 100%;
-    padding: 15px;
+    padding: 15px 18px;
     border-radius: 13px;
     box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
 }
@@ -165,6 +165,7 @@ input:focus {
     align-items: center;
     gap: 15px;
     width: 758px;
+    max-width: 100%;
     margin-bottom: 35px;
 }
 
@@ -172,14 +173,13 @@ input:focus {
     display: flex;
     align-items: center;
     gap: 10px;
-    height: 50px;
 }
 
 .filtre-button {
     margin: 0;
     padding: 0;
     border: none;
-    height: 100%;
+    height: 50px;
     padding: 4px 19px 4px 19px;
     background-color: white;
     border: solid 2px #D9D9D9;
@@ -426,9 +426,91 @@ footer {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    .activites-cards .card {
+        height: 270px;
+    }
+    
+    .activites-cards img {
+        height: 200px;
+    }
+    
+    .activites-cards .card-content {
+        height: 70px;
+    }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+    .main-container {
+        padding: 0;
+    }
+
+    /****** En-tête ***********/
+    header {
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    
+    header img {
+        object-fit: contain;
+    }
+    
+    #main-nav {
+        width: 100%;
+    }
+    
+    #main-nav a {
+        width: 50%;
+        padding: 0 0 15px 0;
+        display: flex;
+        justify-content: center;
+        border-top: none;
+        border-bottom: solid rgba(0, 0, 0, 0) 2px;
+    }
+    
+    #main-nav a:hover {
+        border-top: none;
+        border-bottom: solid var(--main-color) 2px;
+    }
+
+    /****** Recherche et filtres ***********/
+    .recherche-et-filtres {
+        padding: 0 20px;
+    }
+
+    /****** Recherche ***********/
+    .recherche-subtitle {
+        margin: 8px 0 30px 0;
+    }
+    
+    .form-recherche {
+        width: 100%;
+    }
+    
+    .form-submit {
+        display: none;
+    }
+    
+    .form-submit-logo {
+        display: block;
+    }
+
+    /****** Filtres ***********/
+    .filtres {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .choix {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0;
+        height: 120px;
+        align-content: space-between;
+    }
+
+    .filtre-button {
+        width: calc(50% - 5px);
+    }
 }
